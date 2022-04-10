@@ -15,7 +15,6 @@ after_success:
   - docker build -t koustavs18/multi-server ./server
   - docker build -t koustavs18/multi-worker ./worker  
   # login to docker CLI
-  - docker logout
   - echo "$DOCKER_PASSWORD" | docker login -u "DOCKER_ID" --password-stdin
   # take those images and push them to docker hub
   - docker push koustavs18/multi-client
